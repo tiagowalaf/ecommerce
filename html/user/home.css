@@ -1,3 +1,7 @@
+@font-face {
+    font-family: mona;
+    src: url(Mona-Sans-Regular.ttf) format(truetype);
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +10,6 @@
     list-style: none;
     font-family: mona;
     overflow-x: hidden;
-}
-
-@font-face {
-    font-family: mona;
-    src: url(/ecommerce/html/assets/Mona-Sans-Regular.ttf) format(truetype);
 }
 
 /* só para dar um espaçamento entre o header e o footer */

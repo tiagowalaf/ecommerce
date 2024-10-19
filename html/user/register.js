@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailError = document.getElementById('emailErro');
     const confirmError = document.getElementById('emailConfirmErro');
     const passwordStrength = document.getElementById('passwordSt');
+    const emailCadastradoError = document.getElementById('emailCadastrado');
+
+    const emailsCadastrados = ['ana@teste.com', 'tiago@teste.com'];
 
     function validateEmail(email) {
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -37,14 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'Senha forte';
     }
 
+    function checkEmailCadastrado(email) {
+        return emailsCadastrados.includes(email);
+    }
+
     emailInput.addEventListener('input', () => {
         emailError.textContent = validateEmail(emailInput.value) ? '' : 'Formato de email inválido';
+        
+        if (validateEmail(emailInput.value)) {
+            emailCadastradoError.textContent = checkEmailCadastrado(emailInput.value) ? 'Email já cadastrado' : '';
+        } else {
+            emailCadastradoError.textContent = '';
+        }
+        
         confirmError.style.display = 'none';
     });
 
     confirmEmailInput.addEventListener('input', () => {
         confirmError.style.display = emailInput.value !== confirmEmailInput.value ? 'inline' : 'none';
-    });
+    });    
 
     passwordInput.addEventListener('input', () => {
         passwordStrength.textContent = checkPasswordStrength(passwordInput.value);

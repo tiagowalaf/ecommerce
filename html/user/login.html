@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce | Entrar</title>
+    <link rel="stylesheet" href="/ecommerce/html/user/login.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="form-box-div">
+                <div class="form-box">
+                    <h2>Entrar</h2>
+
+                    <form action="" method="POST">
+                        <div class="inputBox">
+                            <div>
+                                <label for="email" class="labelInput">Email</label>
+                                <span id="emailErro" class="erro-message"></span>
+                                <span id="emailNaoEncontrado" class="erro-message"></span>
+                            </div>
+                            <input type="text" name="email" id="email" class="inputUser" placeholder="Digite seu email aqui" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <div>
+                                <label for="password" class="labelInput">Senha</label>
+                                <span id="passwordErro" class="erro-message"></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="inputUser" placeholder="Digite sua senha aqui" required>
+                        </div>
+
+                        <p class="p-aviso">Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+
+                        <input type="hidden" name="csrf_token">
+                        <input type="submit" name="submit" id="submit" value="Login" disabled>
+                    </form>
+                </div>
+            </div>
+
+            <div class="avaliacoes-box">
+                <span>LOGO</span>
+
+                <div class="avaliacoes-box-texts">
+                    <h1>Bem vindo de volta! Faça login e continue aproveitando as ofertas.</h1>
+                    <p>
+                        Entre e tenha suas refeições favoritas na porta em minutos!
+                    </p>
+                </div>
+
+                <div class="avaliacoes-divs">
+                    <div class="avaliacao-card active" id="avaliacao-1">
+                        <h3>Leticia Silva</h3>
+                        <p>Melhor experiência de compra online que já tive! 
+                            A hamburgueria é incrível e a plataforma fácil de usar.
+                            Recomendo demais!
+                         </p>
+                        <p>Cliente</p>
+                    </div>
+
+                    <div class="avaliacao-card" id="avaliacao-2">
+                        <h3>João Pereira</h3>
+                        <p>Os hambúrgueres são sensacionais, muito saborosos e 
+                            sempre chegam bem embalados. A navegação no site é 
+                            rápida e prática.
+                         </p>
+                        <p>Cliente</p>
+                    </div>
+
+                    <div class="avaliacao-card" id="avaliacao-3">
+                        <h3>Larissa Carvalho</h3>
+                        <p>Simplesmente amei o serviço dessa hamburgueria! 
+                            Desde a escolha do lanche até o acompanhamento 
+                            da entrega. Volto sempre.
+                         </p>
+                        <p>Cliente</p>
+                    </div>
+                </div>
+
+                <div class="indicator-container">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/ecommerce/html/user/login.js"></script>
+</body>
+</html>

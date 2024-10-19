@@ -136,6 +136,7 @@ form {
     flex-direction: column;
     align-items: start;
     gap: 30px;
+    width: 85%;
 }
 
 .inputBox {
@@ -152,7 +153,7 @@ form {
 
 .inputBox input {
     height: 50px;
-    width: 85%;
+    width: 100%;
     padding-left: 15px;
     outline: none;
     border-radius: 13px;
@@ -174,18 +175,6 @@ input:-webkit-autofill {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.inputBox-row {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    width: 85%;
-    gap: 10px;
-}
-
-.inputBox-row input {
-    width: 100%;
 }
 
 .p-aviso {
@@ -218,31 +207,18 @@ input[type="submit"]:hover {
     color: #d90429;
     font-size: 14px;
     margin-left: 15px;
-}
-
-.erro-confirm::before {
     display: inline-block;
-    content: 'Email inválido';
-    margin-left: 15px;
-    color: #d90429;
-    font-size: 14px;
 }
 
-.st-message {
-    margin-left: 15px;
-    font-size: 14px;
-    color: #000000ab;
-}
-
-#emailCadastrado {
+#emailNaoEncontrado {
     transform: translateX(-10px);
 }
 
 @media screen and (min-width: 50px) and (max-width: 99px) {
     section {
-        min-height: 180vh;
+        min-height: 100vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 10px 20px 10px;
     }
     
@@ -257,7 +233,7 @@ input[type="submit"]:hover {
     }
 
     .avaliacoes-box span {
-        font-size: 12px;
+        font-size: 10px;
     }
     
     h1 {
@@ -279,6 +255,10 @@ input[type="submit"]:hover {
     .form-box-div {
         width: 100%;
         padding: 35px 0px 25px 0px;
+    }
+
+    form {
+        width: 100%;
     }
     
     h2 {
@@ -295,13 +275,6 @@ input[type="submit"]:hover {
         padding-right: 15px;
     }
     
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
-    }
-    
     .p-aviso {
         font-size: 11px;
         width: 100%;
@@ -310,7 +283,7 @@ input[type="submit"]:hover {
     input[type="submit"] {
         width: 100%;
         height: 50px;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 100;
     }
 
@@ -326,23 +299,17 @@ input[type="submit"]:hover {
         transform: translateX(-15px);
     }
     
-    .erro-confirm::before {
-        content: 'Email inválido';
-        font-size: 12px;
+    #emailNaoEncontrado {
         transform: translateX(-15px);
+        display: inline-block;
     }
-    
-    .st-message {
-        font-size: 12px;
-        transform: translateX(-15px);
-    }   
 }
 
 @media screen and (min-width: 100px) and (max-width: 149px) {
     section {
-        min-height: 170vh;
+        min-height: 100vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 10px 20px 10px;
     }
     
@@ -380,6 +347,10 @@ input[type="submit"]:hover {
         width: 100%;
         padding: 35px 0px 25px 0px;
     }
+
+    form {
+        width: 100%;
+    }
     
     h2 {
         font-size: 1rem;
@@ -393,13 +364,6 @@ input[type="submit"]:hover {
         width: 100%;
         font-size: 14px;
         padding-right: 15px;
-    }
-    
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
     }
     
     .p-aviso {
@@ -424,25 +388,19 @@ input[type="submit"]:hover {
     .erro-message {
         font-size: 12px;
         transform: translateX(-15px);
-    }
-    
-    .erro-confirm::before {
-        content: 'Email inválido';
-        font-size: 12px;
+    }  
+
+    #emailNaoEncontrado {
         transform: translateX(-15px);
-    }
-    
-    .st-message {
-        font-size: 12px;
-        transform: translateX(-15px);
-    }   
+        display: inline-block;
+    } 
 }
 
 @media screen and (min-width: 150px) and (max-width: 199px) {
     section {
-        min-height: 170vh;
+        min-height: 100vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 25px 20px 25px;
     }
     
@@ -475,6 +433,10 @@ input[type="submit"]:hover {
         width: 100%;
         padding: 35px 0px 25px 0px;
     }
+
+    form {
+        width: 100%;
+    }
     
     h2 {
         font-size: 1.3rem;
@@ -488,13 +450,6 @@ input[type="submit"]:hover {
         width: 100%;
         font-size: 14px;
         padding-right: 15px;
-    }
-    
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
     }
     
     .p-aviso {
@@ -521,29 +476,23 @@ input[type="submit"]:hover {
         transform: translateX(-15px);
     }
     
-    .erro-confirm::before {
-        content: 'Email inválido';
-        font-size: 12px;
+    #emailNaoEncontrado {
         transform: translateX(-15px);
-    }
-    
-    .st-message {
-        font-size: 12px;
-        transform: translateX(-15px);
-    }   
+        display: inline-block;
+    } 
 }
 
 @media screen and (min-width: 200px) and (max-width: 249px) {
     section {
-        min-height: 185vh;
+        min-height: 110vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 25px 20px 25px;
     }
     
     .avaliacoes-box {
         width: 100%;
-        height: 300px;
+        height: 340px;
         display: flex;
         justify-content: center;
         gap: 30px;
@@ -551,7 +500,7 @@ input[type="submit"]:hover {
     }
     
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         color: #330009;
     }
     
@@ -565,6 +514,10 @@ input[type="submit"]:hover {
     
     .indicator-container {
         display: none;
+    }
+
+    form {
+        width: 100%;
     }
     
     .form-box-div {
@@ -584,13 +537,6 @@ input[type="submit"]:hover {
         width: 100%;
         font-size: 14px;
         padding-right: 15px;
-    }
-    
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
     }
     
     .p-aviso {
@@ -617,29 +563,23 @@ input[type="submit"]:hover {
         transform: translateX(-15px);
     }
     
-    .erro-confirm::before {
-        content: 'Email inválido';
-        font-size: 12px;
+    #emailNaoEncontrado {
         transform: translateX(-15px);
+        display: inline-block;
     }
-    
-    .st-message {
-        font-size: 12px;
-        transform: translateX(-15px);
-    }   
 }
 
 @media screen and (min-width: 250px) and (max-width: 299px) {
     section {
-        min-height: 185vh;
+        min-height: 115vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 25px 20px 25px;
     }
     
     .avaliacoes-box {
         width: 100%;
-        height: 280px;
+        height: 370px;
         display: flex;
         justify-content: center;
         gap: 30px;
@@ -662,6 +602,10 @@ input[type="submit"]:hover {
     .indicator-container {
         display: none;
     }
+
+    form {
+        width: 100%;
+    }
     
     .form-box-div {
         width: 100%;
@@ -680,13 +624,6 @@ input[type="submit"]:hover {
         width: 100%;
         font-size: 14px;
         padding-right: 15px;
-    }
-    
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
     }
     
     .p-aviso {
@@ -711,31 +648,25 @@ input[type="submit"]:hover {
     .erro-message {
         font-size: 12px;
         transform: translateX(-15px);
-    }
-    
-    .erro-confirm::before {
-        content: 'Email inválido';
-        font-size: 12px;
-        transform: translateX(-15px);
-    }
-    
-    .st-message {
-        font-size: 12px;
-        transform: translateX(-15px);
     }   
+
+    #emailNaoEncontrado {
+        transform: translateX(-15px);
+        display: inline-block;
+    }
 }
 
 @media screen and (min-width: 300px) and (max-width: 430px) {
     section {
-        min-height: 170vh;
+        min-height: 130vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 25px 20px 25px;
     }
     
     .avaliacoes-box {
         width: 100%;
-        height: 280px;
+        height: 400px;
         display: flex;
         justify-content: center;
         gap: 30px;
@@ -758,6 +689,10 @@ input[type="submit"]:hover {
     .indicator-container {
         display: none;
     }
+
+    form {
+        width: 100%;
+    }
     
     .form-box-div {
         width: 100%;
@@ -777,13 +712,6 @@ input[type="submit"]:hover {
         font-size: 14px;
     }
     
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
-    }
-    
     .p-aviso {
         font-size: 13px;
         width: 100%;
@@ -800,30 +728,19 @@ input[type="submit"]:hover {
         font-size: 13px;
         margin-left: 10px;
     }
-    
-    .erro-confirm::before {
-        content: 'Email inválido';
-        margin-left: 10px;
-        font-size: 13px;
-    }
-    
-    .st-message {
-        margin-left: 10px;
-        font-size: 13px;
-    }   
 }
 
 @media screen and (min-width: 431px) and (max-width: 670px) {
     section {
-        min-height: 180vh;
+        min-height: 140vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 20px 25px 20px 25px;
     }
     
     .avaliacoes-box {
         width: 100%;
-        height: 400px;
+        height: 450px;
         display: flex;
         justify-content: center;
         gap: 30px;
@@ -851,6 +768,10 @@ input[type="submit"]:hover {
         width: 100%;
         padding: 35px 0px 25px 0px;
     }
+
+    form {
+        width: 100%;
+    }
     
     h2 {
         font-size: 1.3rem;
@@ -863,13 +784,6 @@ input[type="submit"]:hover {
     .inputBox input {
         width: 100%;
         font-size: 14px;
-    }
-    
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
     }
     
     .p-aviso {
@@ -887,18 +801,7 @@ input[type="submit"]:hover {
     .erro-message {
         font-size: 13px;
         margin-left: 10px;
-    }
-    
-    .erro-confirm::before {
-        content: 'Email inválido';
-        margin-left: 10px;
-        font-size: 13px;
-    }
-    
-    .st-message {
-        margin-left: 10px;
-        font-size: 13px;
-    }   
+    } 
 }
 
 @media screen and (min-width: 671px) and (max-width: 900px) {
@@ -947,13 +850,6 @@ input[type="submit"]:hover {
         font-size: 14px;
     }
     
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
-    }
-    
     .p-aviso {
         font-size: 13px;
         width: 100%;
@@ -969,39 +865,6 @@ input[type="submit"]:hover {
     .erro-message {
         font-size: 13px;
         margin-left: 10px;
-    }
-    
-    .erro-confirm::before {
-        content: 'Email inválido';
-        margin-left: 10px;
-        font-size: 13px;
-    }
-    
-    .st-message {
-        margin-left: 10px;
-        font-size: 13px;
-    }   
-
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background-color: #f3f3f3;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: #d90429;
-        border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: #ccc;
-    }
-
-    .scrollbar {
-        scrollbar-width: thin;
-        scrollbar-color: #ccc #d90429;
     }
 }
 
@@ -1050,13 +913,6 @@ input[type="submit"]:hover {
         font-size: 14px;
     }
     
-    .inputBox-row {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        gap: 30px;
-    }
-    
     .p-aviso {
         font-size: 13px;
         width: 100%;
@@ -1072,39 +928,6 @@ input[type="submit"]:hover {
     .erro-message {
         font-size: 13px;
         margin-left: 10px;
-    }
-    
-    .erro-confirm::before {
-        content: 'Email inválido';
-        margin-left: 10px;
-        font-size: 13px;
-    }
-    
-    .st-message {
-        margin-left: 10px;
-        font-size: 13px;
-    }   
-
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background-color: #f3f3f3;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: #d90429;
-        border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: #ccc;
-    }
-
-    .scrollbar {
-        scrollbar-width: thin;
-        scrollbar-color: #ccc #d90429;
     }
 }
 
@@ -1153,10 +976,6 @@ input[type="submit"]:hover {
         font-size: 14px;
     }
     
-    .inputBox-row {
-        width: 100%;
-    }
-    
     .p-aviso {
         font-size: 13px;
         width: 100%;
@@ -1172,16 +991,5 @@ input[type="submit"]:hover {
     .erro-message {
         font-size: 13px;
         margin-left: 10px;
-    }
-    
-    .erro-confirm::before {
-        content: 'Email inválido';
-        margin-left: 10px;
-        font-size: 13px;
-    }
-    
-    .st-message {
-        margin-left: 10px;
-        font-size: 13px;
-    }   
+    }  
 }

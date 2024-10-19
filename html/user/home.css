@@ -17,6 +17,7 @@
 
 main {
     height: 100vh;
+    background-color: #f3f3f3;
 }
 
 .cabecalho {
@@ -25,6 +26,7 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    border-bottom: 1px solid #cccccc81;
 }
 
 .search-box {
@@ -34,15 +36,14 @@ main {
     width: 500px;
     height: 45px;
     border-radius: 13px;
-    background-color: #f3f3f3;
-    border: 1px solid #00000023;
+    background-color: #fcfcfc;
+    border: 1px solid #00000017;
 }
 
 .search-box input {
     height: 100%;
     width: 90%;
     outline: none;
-    padding-left: 15px;
     border: none;
     background-color: transparent;
     font-size: 14px;
@@ -62,6 +63,7 @@ main {
 
 .search-box img {
     width: 24px;
+    opacity: 70%;
 }
 
 .nav-menu {
@@ -79,7 +81,7 @@ main {
 }
 
 .carrinho-btn img {
-    width: 25px;
+    width: 32px;
 }
 
 .hamburguer {
@@ -103,6 +105,7 @@ footer {
     flex-direction: column;
     align-items: start;
     border-top: 1px solid #cccccc81;
+    background-color: #d90429;
     gap: 30px;
 }
 
@@ -123,14 +126,15 @@ footer ul {
 }
 
 footer ul p {
-    font-weight: bold;
+    font-weight: 100;
     font-size: 16px;
+    color: #ffffff;
 }
 
 footer ul li a {
-    color: #000000;
+    color: #ffffff;
     font-size: 14px;
-    opacity: 80%;
+    opacity: 60%;
     transition: .3s;
 }
 
@@ -159,7 +163,7 @@ footer ul li a:hover {
 .policy {
     display: flex;
     padding: 25px 40px 25px 40px;
-    border-top: 1px solid #ccccccaf;
+    border-top: 1px solid #bd0524;
     width: 100%;
     flex-direction: row;
     align-items: center;
@@ -167,7 +171,7 @@ footer ul li a:hover {
 }
 
 .policy a {
-    color: blue;
+    color: #4b000c;
     font-size: 14px;
     cursor: pointer;
 }

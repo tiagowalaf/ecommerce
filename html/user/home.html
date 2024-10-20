@@ -7,19 +7,42 @@
     <link rel="stylesheet" href="/ecommerce/html/user/home.css">
 </head>
 <body>
+    <div class="header-top">
+        <div class="timer-div">
+            <p>A promoção termina em:</p>
+            <div id="timer">
+                <span id="hours">04</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+        </div>
+        <p>Aproveite ofertas de até 25% OFF</p>
+        <a href="#newsletter">Inscreva-se para receber atualizações</a>
+    </div>
+
     <header class="cabecalho">
-        <span>LOGO</span>
+        <p class="logo">Ecommerce<span>.</span></p>
 
         <div class="search-box">
             <button><img src="/ecommerce/html/assets/lupa-icon-2.png" alt="Ícone lupa"></button>
-            <input type="text" placeholder="O que você procura?">
+            <input type="text" placeholder="Procure por um produto">
         </div>
 
-        <div class="user-log"></div>
+        <div class="header-endereco">
+            <p>Adicione seu endereço</p>
+            <div class="header-endereco-div">
+                <span id="endereco" class="censurado">Brasil, SP</span>
+                <img src="/ecommerce/html/assets/seta-para-baixo-icon.png" alt="">
+            </div>
+        </div>
+
+        <div class="userLogado"></div>
 
         <nav>
             <ul class="nav-menu">
-                <li class="nav-item"><button class="carrinho-btn"><img src="/ecommerce/html/assets/sacola-de-compras-icon-2.png" alt=""></button></li>
+                <li class="nav-item"><a href="#"><img style="width: 23px;" src="/ecommerce/html/assets/coracao-icon.png" alt="Icone coração"></a></li>
+                <li class="nav-item"><a href="#"><img src="/ecommerce/html/assets/sacola-icon.png" alt="Icone sacola de compras"></a></li>
+
+                <!-- se o usuário não estiver logado -->
+                <li class="nav-item"><a href="/ecommerce/html/user/register.html"><img src="/ecommerce/html/assets/usuario-icon.png" alt="Icone de usuario"></a></li>
             </ul>
 
             <div class="hamburguer">
@@ -30,44 +53,88 @@
         </nav>
     </header>
 
-    <main>
+    <div id="modalEndereco" class="modalEndereco">
+        <div class="modalBoxEndereco">
+            <div class="modal-box-start">
+                <p>Adicione seu endereço</p>
+                <span class="fechar">&times;</span>
+            </div>
 
+            <div class="inputBoxModal">
+                <input type="text" id="cep" placeholder="Digite seu CEP aqui" maxlength="9">
+                <button id="buscarCep">Buscar</button>
+            </div>
+
+            <input type="text" class="input-modal" id="numero" placeholder="Número da casa/apto/bloco">
+            <input type="text" class="input-modal" id="enderecoUser" placeholder="Endereço completo" readonly>
+            <button id="salvarEndereco">Salvar</button>
+        </div>
+    </div>
+
+    <main>
+        <section class="sec">
+
+        </section>
+
+        <section class="sec-newsletter" id="newsletter">
+            <p class="tag-newsletter">Nossas notícias</p>
+            <h6>Assine nossa newsletter para receber atualizações sobre nossas últimas <span>ofertas</span></h6>
+
+            <div class="search-box-newsletter">
+                <input type="text" placeholder="Digite seu email aqui">
+                <button>Assinar</button>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="uls">
+        <div class="footer">
+            <div class="info-footer-div">
+                <p class="logo" style="color: #ffffff; font-weight: 100;">Ecommerce<span>.</span></p>
+                <p class="descri-footer-div">
+                    Siga-nos nas redes sociais para ficar por dentro das novidades. 
+                    Agradecemos por escolher nossa plataforma para suas refeições. 
+                    Estamos aqui para tornar cada momento mais saboroso!
+                </p>
+                <div class="redes">
+                    <a href="#"><img src="/ecommerce/html/assets/facebook-icon.png" alt="Logo facebook"></a>
+                    <a href="#"><img src="/ecommerce/html/assets/twitter-icon.png" alt="Logo twitter"></a>
+                    <a href="#"><img src="/ecommerce/html/assets/instagram-icon.png" alt="Logo instagram"></a>
+                    <a href="#"><img src="/ecommerce/html/assets/whatsapp-icon.png" alt="Logo whatsapp"></a>
+                </div>
+            </div>
+
             <ul>
-                <p>LOGO</p>
-                <li><a href="#">Fale conosco</a></li>
-                <li><a href="#">Carreiras</a></li>
+                <p>Quem Somos</p>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Trabalhe conosco</a></li>
+                <li><a href="#">Cidades atendidas</a></li>
+                <li><a href="#">Parceiros</a></li>
             </ul>
 
             <ul>
                 <p>Descubra</p>
-                <li><a href="#">Cupons</a></li>
+                <li><a href="#">Minha conta</a></li>
                 <li><a href="#">Formas de pagamento</a></li>
-                
+                <li><a href="#">Cupons</a></li>
+                <li><a href="#">FAQ</a></li>
             </ul>
 
             <ul>
-                <p></p>
-                <li><a href="#">Perguntas frequentes</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <p>Informações</p>
+                <li><a href="#">Privacidade de dados</a></li>
+                <li><a href="#">Informações legais</a></li>
+                <li><a href="#">Opções de privacidade</a></li>
+            </ul>
 
-                <div class="redes">
-                    <img src="/ecommerce/html/assets/facebook-logo-d.png" alt="Logo da rede social Facebook">
-                    <img style="width: 22px; height: 22px;" src="/ecommerce/html/assets/twitter-logo-d.png" alt="Logo da rede social Twitter">
-                    <img style="width: 22px; height: 22px;" src="/ecommerce/html/assets/whatsapp-logo-d.png" alt="Logo do aplicativo de conversa Whatsapp">
-                </div>
+            <ul>
+                <p>Contato</p>
+                <li><a href="#">+000-000-000</a></li>
+                <li><a href="#">ecommerce@gmail.com</a></li>
             </ul>
         </div>
-
-        <div class="policy">
-            <a href="#">Termos de uso</a>
-            <a href="#">Privacidade da conta</a>
-            <a href="#">Formas de pagamento</a>
-            <a href="#">Politica de reembolso</a>
-        </div>
     </footer>
+
+    <script src="/ecommerce/html/user/home.js"></script>
 </body>
 </html>

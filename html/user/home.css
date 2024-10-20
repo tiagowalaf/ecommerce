@@ -13,11 +13,46 @@
     src: url(/ecommerce/html/assets/Mona-Sans-Regular.ttf) format(truetype);
 }
 
-/* só para dar um espaçamento entre o header e o footer */
+html {
+    scroll-behavior: smooth;
+}
 
-main {
-    height: 100vh;
-    background-color: #f3f3f3;
+.header-top {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #d90429;
+    gap: 50px;
+}
+
+.header-top p, .header-top a {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.header-top a:hover {
+    opacity: 90%;
+}
+
+.timer-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+#timer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px 3px 8px;
+    border-radius: 5px;
+    color: #ffffffc5;
+    font-size: 14px;
+    background-color: #bd0524;
 }
 
 .cabecalho {
@@ -25,8 +60,18 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid #cccccc81;
+    padding: 15px 75px 15px 75px;
+    border-bottom: 1px solid #cccccc8e;
+}
+
+.logo {
+    font-size: 18px;
+    color: #d90429;
+    font-weight: bold;
+}
+
+.logo span {
+    opacity: 50%;
 }
 
 .search-box {
@@ -34,8 +79,8 @@ main {
     flex-direction: row;
     align-items: center;
     width: 500px;
-    height: 45px;
-    border-radius: 13px;
+    height: 40px;
+    border-radius: 10px;
     background-color: #fcfcfc;
     border: 1px solid #00000017;
 }
@@ -66,22 +111,173 @@ main {
     opacity: 70%;
 }
 
-.nav-menu {
+.header-endereco {
     display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
-.carrinho-btn {
-    background-color: transparent;
+.header-endereco span {
+    color: #000000;
+    font-weight: 100;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header-endereco p {
+    color: #000000;
+    font-size: 13px;
+}
+
+.header-endereco-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    transition: .3s;
+}
+
+.header-endereco-div img {
+    width: 17px;
+}
+
+.header-endereco-div:hover {
+    opacity: 80%;
+}
+
+.modalEndereco {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    background-color: #00000028;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.modalBoxEndereco {
+    margin: 11% auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+.modal-box-start {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-box-start p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.fechar {
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.fechar:hover {
+    opacity: 80%;
+}
+
+.inputBoxModal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.inputBoxModal input {
+    width: 70%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    font-size: 13px;
+    outline: none;
+}
+
+.inputBoxModal button {
+    width: 30%;
+    height: 40px;
+    background-color: #d90429;
+    color: #ffffff;
+    border: none;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-modal {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    font-size: 13px;
+    outline: none;
+}
+
+#salvarEndereco {
+    width: 100%;
+    height: 40px;
+    background-color: #d90429;
     border: none;
     outline: none;
+    color: #ffffff;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
-.carrinho-btn img {
-    width: 32px;
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item a img {
+    width: 20px;
+    opacity: 80%;
+    transition: .3s;
+}
+
+.nav-item a img:hover {
+    opacity: 100%;
 }
 
 .hamburguer {
@@ -99,47 +295,107 @@ main {
     transition: all .3s ease-in-out;
 }
 
-footer {
-    min-height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    border-top: 1px solid #cccccc81;
-    background-color: #d90429;
-    gap: 30px;
+/* fim do cabeçalho */
+
+.sec {
+    min-height: 30vh;
+    background-color: #ffffff;
 }
 
-.uls {
-    display: flex;
-    padding: 30px 40px 0px 40px;
-    width: 100%;
-    flex-direction: row;
-    align-items: start;
-}
-
-footer ul {
+.sec-newsletter {
+    min-height: 60vh;
+    background-color: #f3f3f3;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    width: 345px;
 }
 
-footer ul p {
-    font-weight: 100;
-    font-size: 16px;
-    color: #ffffff;
+.tag-newsletter {
+    font-size: 15px;
 }
 
-footer ul li a {
+h6 {
+    font-size: 1.7rem;
+    width: 50%;
+    text-align: center;
+}
+
+h6 span {
+    color: #d90429;
+}
+
+.search-box-newsletter {
+    width: 500px;
+    height: 50px;
+    border-radius: 100px;
+    border: 1px solid #ccccccc4;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-box-newsletter input {
+    height: 100%;
+    width: 73%;
+    font-size: 15px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.search-box-newsletter button {
+    width: 25%;
+    height: 80%;
+    background-color: #d90429;
+    border: none;
+    outline: none;
     color: #ffffff;
-    font-size: 14px;
-    opacity: 60%;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 15px;
     transition: .3s;
 }
 
-footer ul li a:hover {
-    opacity: 100%;
+.search-box-newsletter button:hover {
+    background-color: #bd0524;
+}
+
+footer {
+    height: 50vh;
+    padding: 10px 15px 10px 15px;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 40px 40px 10px 40px;
+    background-color: #d90429;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.info-footer-div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    width: 20%
+}
+
+.descri-footer-div {
+    color: #ffffff86;
+    font-size: 13px;
 }
 
 .redes {
@@ -149,33 +405,45 @@ footer ul li a:hover {
     gap: 20px;
 }
 
+.redes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: #ffffff41;
+}
+
 .redes img {
-    width: 25px;
-    opacity: 60%;
-    cursor: pointer;
+    width: 22px;
     transition: .3s;
 }
 
-.redes img:hover {
-    opacity: 100%;
+.redes a > img:hover {
+    opacity: 80%;
 }
 
-.policy {
+.footer ul {
     display: flex;
-    padding: 25px 40px 25px 40px;
-    border-top: 1px solid #bd0524;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+    gap: 13px;   
 }
 
-.policy a {
-    color: #4b000c;
-    font-size: 14px;
-    cursor: pointer;
+.footer ul p {
+    color: #ffffff;
+    font-size: 15px;
 }
 
-.policy a:hover {
+.footer ul li a {
+    color: #ffffff;
+    opacity: 50%;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.footer ul li a:hover {
+    opacity: 100%;
     text-decoration: underline;
 }

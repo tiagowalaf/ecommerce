@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def show_form_register(request):
+    return render(request=request, template_name='register.html')
+
+
+def show_form_login(request):
+    return render(request=request, template_name='login.html')

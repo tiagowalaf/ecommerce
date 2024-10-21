@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce | Cadastre-se</title>
+    <link rel="stylesheet" href="/ecommerce/html/user/register.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="avaliacoes-box">
+                <span>LOGO</span>
+
+                <div class="avaliacoes-box-texts">
+                    <h1>A experiência perfeita está a um cadastro de distância.</h1>
+                    <p>
+                        Crie uma conta e tenha suas refeições favoritas na sua porta
+                        em minutos, com agilidade e qualidade garantida.
+                    </p>
+                </div>
+
+                <div class="avaliacoes-divs">
+                    <div class="avaliacao-card active" id="avaliacao-1">
+                        <h3>Leticia Silva</h3>
+                        <p>Melhor experiência de compra online que já tive! 
+                            A hamburgueria é incrível e a plataforma fácil de usar.
+                            Recomendo demais!
+                         </p>
+                        <p>Cliente</p>
+                    </div>
+
+                    <div class="avaliacao-card" id="avaliacao-2">
+                        <h3>João Pereira</h3>
+                        <p>Os hambúrgueres são sensacionais, muito saborosos e 
+                            sempre chegam bem embalados. A navegação no site é 
+                            rápida e prática.
+                         </p>
+                        <p>Cliente</p>
+                    </div>
+
+                    <div class="avaliacao-card" id="avaliacao-3">
+                        <h3>Larissa Carvalho</h3>
+                        <p>Simplesmente amei o serviço dessa hamburgueria! 
+                            Desde a escolha do lanche até o acompanhamento 
+                            da entrega. Volto sempre.
+                         </p>
+                        <p>Cliente</p>
+                    </div>
+                </div>
+
+                <div class="indicator-container">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
+            </div>
+
+
+            <div class="form-box-div">
+                <div class="form-box">
+                    <h2>Cadastrar</h2>
+
+                    <form action="" method="POST">
+                        <div class="inputBox">
+                            <label for="nome" class="labelInput">Nome completo</label>
+                            <input type="text" name="nome" id="nome" class="inputUser" placeholder="Digite seu nome completo aqui" required>
+                        </div>
+
+                        <div class="inputBox-row">
+                            <div class="inputBox">
+                                <div>
+                                    <label for="email" class="labelInput">Email</label>
+                                    <span id="emailErro" class="erro-message"></span><span id="emailCadastrado" class="erro-message"></span>
+                                </div>
+                                <input type="text" name="email" id="email" class="inputUser" placeholder="Digite seu email aqui" required>
+                            </div>
+
+                            <div class="inputBox">
+                                <div>
+                                    <label for="email" class="labelInput">Confirme seu email</label>
+                                    <span id="emailConfirmErro" class="erro-confirm" style="display: none;"></span>
+                                </div>
+                                <input type="text" name="confirmEmail" id="confirmEmail" class="inputUser" placeholder="Digite seu email novamente" required>
+                            </div>
+                        </div>
+
+                        <div class="inputBox">
+                            <div>
+                                <label for="password" class="labelInput">Senha</label>
+                                <span id="passwordSt" class="st-message"></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="inputUser" placeholder="Digite sua senha aqui" required>
+                        </div>
+
+                        <p class="p-aviso">
+                            Ao clicar em Cadastrar, você aceita o <a href="#">Contrato do Usuário</a>,
+                            a <a href="#">Política de Privacidade</a> e a <a href="#">Política de Cookies</a>
+                            da....
+                        </p>
+
+                        <input type="hidden" name="csrf_token">
+                        <input type="submit" name="submit" id="submit" value="Cadastrar" disabled>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/ecommerce/html/user/register.js"></script>
+</body>
+</html>

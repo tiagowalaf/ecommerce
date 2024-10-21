@@ -1,0 +1,1187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: mona;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: mona;
+    src: url(/ecommerce/html/assets/Mona-Sans-Regular.ttf) format(truetype);
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 20px;
+    width: 100%;
+}
+
+.avaliacoes-box {
+    width: 30%;
+    height: 100%;
+    background-color: #d90429;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 25px 25px 25px;
+}
+
+.avaliacoes-box span {
+    color: #ffffff;
+}
+
+.avaliacoes-box-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+}
+
+.avaliacoes-box-texts p {
+    font-size: 15px;
+    color: #ffffff9d;
+}
+
+.avaliacoes-divs {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.avaliacao-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #bb0020;
+    border-radius: 15px;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.avaliacao-card p {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.avaliacao-card.active {
+    opacity: 1;
+}
+
+.avaliacao-card.inactive {
+    opacity: 0;
+}
+
+.indicator-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #ffffff7e;
+    border-radius: 50px;
+    transition: background-color .3s ease;
+}
+
+.indicator.active {
+    background-color: #ffffff;
+}
+
+.form-box-div {
+    width: 70%;
+    height: 100%;
+    padding: 40px 25px 25px 70px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+h2 {
+    color: #303030;
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    width: 100%;
+}
+
+.inputBox label {
+    font-size: 16px;
+}
+
+.inputBox input {
+    height: 50px;
+    width: 85%;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 13px;
+    border: 2px solid #0000002c;
+    font-size: 15px;
+    transition: .3s ease;
+}
+
+.inputBox input:hover, .inputBox input:focus {
+    border: 2px solid #d90429;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px #ffffff inset;
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+}
+
+.inputBox div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inputBox-row {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 85%;
+    gap: 10px;
+}
+
+.inputBox-row input {
+    width: 100%;
+}
+
+.p-aviso {
+    font-size: 14px;
+    width: 85%;
+}
+
+.p-aviso a:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 170px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 100;
+    border-radius: 13px;
+    border: none;
+    color: #ffffff;
+    background-color: #d90429;
+    cursor: pointer;
+    transition: .5s;
+}
+
+input[type="submit"]:hover {
+    opacity: 85%;
+}
+
+.erro-message {
+    color: #d90429;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.erro-confirm::before {
+    display: inline-block;
+    content: 'Email inválido';
+    margin-left: 15px;
+    color: #d90429;
+    font-size: 14px;
+}
+
+.st-message {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #000000ab;
+}
+
+#emailCadastrado {
+    transform: translateX(-10px);
+}
+
+@media screen and (min-width: 50px) and (max-width: 99px) {
+    section {
+        min-height: 180vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px 20px 10px;
+    }
+    
+    .avaliacoes-box {
+        width: 100%;
+        height: 35px;
+        padding: 0px;
+        display: flex;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .avaliacoes-box span {
+        font-size: 12px;
+    }
+    
+    h1 {
+        display: none;
+    }
+    
+    .avaliacoes-box-texts p {
+        display: none;
+    }
+    
+    .avaliacoes-divs {
+        display: none;
+    }
+    
+    .indicator-container {
+        display: none;
+    }
+    
+    .form-box-div {
+        width: 100%;
+        padding: 35px 0px 25px 0px;
+    }
+    
+    h2 {
+        font-size: 0.8rem;
+    }
+    
+    .inputBox label {
+        font-size: 13px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+        padding-right: 15px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 11px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+    .inputBox div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+    }
+    
+    .erro-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .st-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }   
+}
+
+@media screen and (min-width: 100px) and (max-width: 149px) {
+    section {
+        min-height: 170vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px 20px 10px;
+    }
+    
+    .avaliacoes-box {
+        width: 100%;
+        height: 35px;
+        padding: 0px;
+        display: flex;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .avaliacoes-box span {
+        font-size: 12px;
+    }
+    
+    h1 {
+        display: none;
+    }
+    
+    .avaliacoes-box-texts p {
+        display: none;
+    }
+    
+    .avaliacoes-divs {
+        display: none;
+    }
+    
+    .indicator-container {
+        display: none;
+    }
+    
+    .form-box-div {
+        width: 100%;
+        padding: 35px 0px 25px 0px;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+    
+    .inputBox label {
+        font-size: 14px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+        padding-right: 15px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 11px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 12px;
+        font-weight: 100;
+    }
+
+    .inputBox div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+    }
+    
+    .erro-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .st-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }   
+}
+
+@media screen and (min-width: 150px) and (max-width: 199px) {
+    section {
+        min-height: 170vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 25px 20px 25px;
+    }
+    
+    .avaliacoes-box {
+        width: 100%;
+        height: 50px;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    h1 {
+        display: none;
+    }
+    
+    .avaliacoes-box-texts p {
+        display: none;
+    }
+    
+    .avaliacoes-divs {
+        display: none;
+    }
+    
+    .indicator-container {
+        display: none;
+    }
+    
+    .form-box-div {
+        width: 100%;
+        padding: 35px 0px 25px 0px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .inputBox label {
+        font-size: 14px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+        padding-right: 15px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 13px;
+        font-weight: 100;
+    }
+
+    .inputBox div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+    }
+    
+    .erro-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .st-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }   
+}
+
+@media screen and (min-width: 200px) and (max-width: 249px) {
+    section {
+        min-height: 185vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 25px 20px 25px;
+    }
+    
+    .avaliacoes-box {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 0px 15px 0px 15px;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+        color: #330009;
+    }
+    
+    .avaliacoes-box-texts p {
+        display: none;
+    }
+    
+    .avaliacoes-divs {
+        display: none;
+    }
+    
+    .indicator-container {
+        display: none;
+    }
+    
+    .form-box-div {
+        width: 100%;
+        padding: 35px 0px 25px 0px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .inputBox label {
+        font-size: 14px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+        padding-right: 15px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 15px;
+        font-weight: 100;
+    }
+
+    .inputBox div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+    }
+    
+    .erro-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .st-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }   
+}
+
+@media screen and (min-width: 250px) and (max-width: 299px) {
+    section {
+        min-height: 185vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 25px 20px 25px;
+    }
+    
+    .avaliacoes-box {
+        width: 100%;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 0px 25px 0px 25px;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+        color: #330009;
+    }
+    
+    .avaliacoes-box-texts p {
+        display: none;
+    }
+    
+    .avaliacoes-divs {
+        display: none;
+    }
+    
+    .indicator-container {
+        display: none;
+    }
+    
+    .form-box-div {
+        width: 100%;
+        padding: 35px 0px 25px 0px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .inputBox label {
+        font-size: 14px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+        padding-right: 15px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    .inputBox div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+    }
+    
+    .erro-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        font-size: 12px;
+        transform: translateX(-15px);
+    }
+    
+    .st-message {
+        font-size: 12px;
+        transform: translateX(-15px);
+    }   
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+    section {
+        min-height: 170vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 25px 20px 25px;
+    }
+    
+    .avaliacoes-box {
+        width: 100%;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 0px 25px 0px 25px;
+    }
+    
+    h1 {
+        font-size: 1.7rem;
+        color: #330009;
+    }
+    
+    .avaliacoes-box-texts p {
+        display: none;
+    }
+    
+    .avaliacoes-divs {
+        display: none;
+    }
+    
+    .indicator-container {
+        display: none;
+    }
+    
+    .form-box-div {
+        width: 100%;
+        padding: 35px 0px 25px 0px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .inputBox label {
+        font-size: 15px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    
+    .erro-message {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    
+    .st-message {
+        margin-left: 10px;
+        font-size: 13px;
+    }   
+}
+
+@media screen and (min-width: 431px) and (max-width: 670px) {
+    section {
+        min-height: 180vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 25px 20px 25px;
+    }
+    
+    .avaliacoes-box {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 0px 45px 0px 25px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        color: #330009;
+    }
+    
+    .avaliacoes-box-texts p {
+        color: #580010b9;
+    }
+    
+    .avaliacoes-divs {
+        display: none;
+    }
+    
+    .indicator-container {
+        display: none;
+    }
+    
+    .form-box-div {
+        width: 100%;
+        padding: 35px 0px 25px 0px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .inputBox label {
+        font-size: 15px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    
+    .erro-message {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    
+    .st-message {
+        margin-left: 10px;
+        font-size: 13px;
+    }   
+}
+
+@media screen and (min-width: 671px) and (max-width: 900px) {
+    section {
+        min-height: 100vh;
+        display: flex;
+        padding: 25px;
+    }
+    
+    .avaliacoes-box {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .avaliacoes-divs {
+        display: none;
+    }
+    
+    .indicator-container {
+        display: none;
+    }
+    
+    .form-box-div {
+        width: 60%;
+        padding: 20px 25px 25px 25px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .inputBox label {
+        font-size: 15px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    
+    .erro-message {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    
+    .st-message {
+        margin-left: 10px;
+        font-size: 13px;
+    }   
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f3f3f3;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #d90429;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #ccc;
+    }
+
+    .scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #ccc #d90429;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1000px) {
+    section {
+        min-height: 100vh;
+        display: flex;
+        padding: 25px;
+    }
+    
+    .avaliacoes-box {
+        width: 40%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .avaliacoes-box-texts p {
+        font-size: 12px;
+    }
+
+    .avaliacao-card p {
+        font-size: 12px;
+    }
+    
+    h3 {
+        font-size: 14px;
+    }
+    
+    .form-box-div {
+        width: 60%;
+        padding: 20px 25px 25px 25px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .inputBox label {
+        font-size: 15px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .inputBox-row {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    .p-aviso {
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    
+    .erro-message {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    
+    .st-message {
+        margin-left: 10px;
+        font-size: 13px;
+    }   
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f3f3f3;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #d90429;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #ccc;
+    }
+
+    .scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #ccc #d90429;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1500px) {
+    section {
+        min-height: 100vh;
+        display: flex;
+        padding: 20px;
+    }
+    
+    .avaliacoes-box {
+        width: 35%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .avaliacoes-box-texts p {
+        font-size: 12px;
+    }
+
+    .avaliacao-card p {
+        font-size: 12px;
+    }
+    
+    h3 {
+        font-size: 14px;
+    }
+    
+    .form-box-div {
+        width: 65%;
+        padding: 20px 25px 0px 25px;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .inputBox label {
+        font-size: 15px;
+    }
+    
+    .inputBox input {
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .inputBox-row {
+        width: 100%;
+    }
+    
+    .p-aviso {
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    
+    .erro-message {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    
+    .erro-confirm::before {
+        content: 'Email inválido';
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    
+    .st-message {
+        margin-left: 10px;
+        font-size: 13px;
+    }   
+}

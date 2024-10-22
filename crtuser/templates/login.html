@@ -14,14 +14,14 @@
                 <div class="form-box">
                     <h2>Entrar</h2>
 
-                    <form action="" method="POST">
+                    <form action="{% url "ct_hash:login_hash" %}" method="post">
                         <div class="inputBox">
                             <div>
                                 <label for="email" class="labelInput">Email</label>
                                 <span id="emailErro" class="erro-message"></span>
                                 <span id="emailNaoEncontrado" class="erro-message"></span>
                             </div>
-                            <input type="text" name="email" id="email" class="inputUser" placeholder="Digite seu email aqui" required>
+                            {{login_form.email}}
                         </div>
 
                         <div class="inputBox">
@@ -29,14 +29,12 @@
                                 <label for="password" class="labelInput">Senha</label>
                                 <span id="passwordErro" class="erro-message"></span>
                             </div>
-                            <input type="password" name="password" id="password" class="inputUser" placeholder="Digite sua senha aqui" required>
+                            {{login_form.password}}
                         </div>
 
                         <p class="p-aviso">Ainda não tem uma conta? 
                             <a href="{% url "ct_hash:home_register" %}">Cadastre-se</a>
                         </p>
-
-                        <input type="hidden" name="csrf_token">
                         <input type="submit" name="submit" id="submit" value="Login" disabled>
                     </form>
                 </div>

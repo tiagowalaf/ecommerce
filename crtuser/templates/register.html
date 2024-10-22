@@ -62,10 +62,11 @@
                 <div class="form-box">
                     <h2>Cadastrar</h2>
 
-                    <form action="" method="POST">
+                    <form action="{% url "ct_hash:create_hash" %}" method="post">
+                        {% csrf_token %}
                         <div class="inputBox">
                             <label for="nome" class="labelInput">Nome completo</label>
-                            <input type="text" name="nome" id="nome" class="inputUser" placeholder="Digite seu nome completo aqui" required>
+                            {{form.username}}
                         </div>
 
                         <div class="inputBox-row">
@@ -74,7 +75,7 @@
                                     <label for="email" class="labelInput">Email</label>
                                     <span id="emailErro" class="erro-message"></span><span id="emailCadastrado" class="erro-message"></span>
                                 </div>
-                                <input type="text" name="email" id="email" class="inputUser" placeholder="Digite seu email aqui" required>
+                                {{form.email}}
                             </div>
 
                             <div class="inputBox">
@@ -82,7 +83,7 @@
                                     <label for="email" class="labelInput">Confirme seu email</label>
                                     <span id="emailConfirmErro" class="erro-confirm" style="display: none;"></span>
                                 </div>
-                                <input type="text" name="confirmEmail" id="confirmEmail" class="inputUser" placeholder="Digite seu email novamente" required>
+                                {{form.repeat_email}}
                             </div>
                         </div>
 
@@ -91,7 +92,7 @@
                                 <label for="password" class="labelInput">Senha</label>
                                 <span id="passwordSt" class="st-message"></span>
                             </div>
-                            <input type="password" name="password" id="password" class="inputUser" placeholder="Digite sua senha aqui" required>
+                            {{form.password}}
                         </div>
 
                         <p class="p-aviso">
@@ -99,8 +100,6 @@
                             a <a href="#">Política de Privacidade</a> e a <a href="#">Política de Cookies</a>
                             da....
                         </p>
-
-                        <input type="hidden" name="csrf_token">
                         <input type="submit" name="submit" id="submit" value="Cadastrar" disabled>
                     </form>
                 </div>

@@ -1,6 +1,7 @@
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fobb7jd$3cy53n$so&d7fun4v2zhhqnnxgu_jn=_^2_pg)obv1'
+import os
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -15,6 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crtuser',
+    'ecommerce',
 ]
 
 MIDDLEWARE = [
@@ -32,7 +34,7 @@ ROOT_URLCONF = 'configurations.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR / 'global_template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,5 +80,9 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'global_static/'
+]
+STATIC_ROOT = BASE_DIR / 'files'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

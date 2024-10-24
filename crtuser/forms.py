@@ -22,7 +22,7 @@ class CreateUser(forms.ModelForm):
         }
     def clean_username(self) -> object:
         data = self.cleaned_data.get('username',{})
-        if len(data) < 10: 
+        if len(data) < 10:
             raise ValidationError(_("Valor menor que 10", code="invalid")) 
         return data
 
@@ -53,3 +53,4 @@ class LoginForm(forms.Form):
     password = forms.CharField(
         max_length=100,required=True,widget=forms.PasswordInput(
             attrs={'name':'password', 'id':'password','class':'inputUser', 'placeholder':'Digite sua senha aqui'}))
+    # add validations
